@@ -8,28 +8,11 @@ public class Student {
     }
 
     public Student(String n, String sid) {
-        if(isValidStudent_id(sid)){
-            this.name = !n.equalsIgnoreCase("")?n:"John Doe";
-            this.student_id = !sid.equalsIgnoreCase("")?sid:"560610000";
-        }else{
-            this.name = !n.equalsIgnoreCase("")?n:"John Doe";
-            this.student_id = "560610000";
-        }
+        this(n, sid, 1990, false);
     }
 
     public Student(String n, String sid, int yob){
-        if(isValidStudent_id(sid)){
-            this.student_id = !sid.equalsIgnoreCase("")?sid:"560610000";
-        }else{
-            this.student_id = "560610000";
-        }
-        if(isValidYOB(yob)){
-            this.YearOfBirth = yob;
-        }else{
-            this.YearOfBirth = 1990;
-        }
-        this.name = !n.equalsIgnoreCase("")?n:"John Doe";
-
+        this(n, sid, yob, false);
     }
 
     public Student(String n, String sid, int yob, boolean stat){

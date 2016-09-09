@@ -59,7 +59,7 @@ public class CourseTest {
         assertEquals("Pruet Boonma", c.getLecturer());
         assertEquals(60, c.getMax_students() );
 
-        c.setCourse_id("2612003");
+        c.setCourse_id("2612006663");
         assertEquals("261344", c.getCourse_id());
         c.setNo_students(80);
         assertEquals(0, c.getNo_students());

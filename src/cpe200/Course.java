@@ -10,15 +10,12 @@ public class Course {
     }
 
     public Course(String n, String cid) {
-        this.course_name = !n.equalsIgnoreCase("")?n:"TBA";
-        this.course_id = !cid.equalsIgnoreCase("")?cid:"000000";
+        this(n, cid, " ", 30);
 
     }
 
     public Course(String n, String cid, String l) {
-        this.course_name = !n.equalsIgnoreCase("")?n:"TBA";
-        this.course_id = !cid.equalsIgnoreCase("")?cid:"000000";
-        this.lecturer = !l.equalsIgnoreCase("")?l:"TBA";
+        this(n, cid, l, 30);
     }
 
     public Course(String n, String cid, String l, int max) {
