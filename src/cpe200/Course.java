@@ -41,7 +41,7 @@ public class Course {
     }
 
     public void setCourse_id(String course_id) {
-        if(course_id.matches(idREGEX) && (course_id.length() == 6)){
+        if(isValidCourse_id(course_id) && (course_id.length() == 6)){
             this.course_id = course_id;
         }
         else{
@@ -106,10 +106,13 @@ public class Course {
     private boolean isValidCourse_id(String id) {
         Pattern p = Pattern.compile(idREGEX);
         Matcher m = p.matcher(id);
-
-        // implement the rest here
-
-        return true;
+        boolean matches = m.matches();
+        if(matches){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     // Regular expression for the Student ID pattern

@@ -72,7 +72,7 @@ public class Student {
     }
 
     public void setStudent_id(String student_id){
-        if(student_id.matches(Regex)){
+        if(isValidStudent_id(student_id)){
             this.student_id = student_id;
         }else{
             return;
@@ -91,7 +91,7 @@ public class Student {
 
     @Override
     public String toString() {
-        String tmp = "";
+        String tmp;
         if(Status == true){
             tmp = "ACTIVE";
         }else{
